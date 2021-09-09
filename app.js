@@ -131,50 +131,52 @@
 
 //Factory pattern
 
-function MemberFactory() {
-    this.CreateMember = function(name,type) {
-        let member;
-        if (type ==='simple') {
-            member = new SimpleMemberShip(name);
-        } else if (type ==='standard') {
-            member = new StandardMemberShip(name);
-        } else if (type ==='superb') {
-            member = new SuperMemberShip(name);
-        }
-        member.type = type;
-        member.define = function() {
-            console.log(`${this.name} (${this.type}) ${this.cost}`);
-        }
+// function MemberFactory() {
+//     this.CreateMember = function(name,type) {
+//         let member;
+//         if (type ==='simple') {
+//             member = new SimpleMemberShip(name);
+//         } else if (type ==='standard') {
+//             member = new StandardMemberShip(name);
+//         } else if (type ==='superb') {
+//             member = new SuperMemberShip(name);
+//         }
+//         member.type = type;
+//         member.define = function() {
+//             console.log(`${this.name} (${this.type}) ${this.cost}`);
+//         }
 
-        return member;
-    }
-}
+//         return member;
+//     }
+// }
 
 
-const SimpleMemberShip = function(name) {
-    this.name = name;
-    this.cost = '5$';
-}
+// const SimpleMemberShip = function(name) {
+//     this.name = name;
+//     this.cost = '5$';
+// }
 
-const StandardMemberShip = function(name) {
-    this.name = name;
-    this.cost = '15$';
-}
+// const StandardMemberShip = function(name) {
+//     this.name = name;
+//     this.cost = '15$';
+// }
 
-const SuperMemberShip = function(name) {
-    this.name = name;
-    this.cost = '25$';
-}
+// const SuperMemberShip = function(name) {
+//     this.name = name;
+//     this.cost = '25$';
+// }
 
-let members =[];
-const factory = new MemberFactory();
-members.push(factory.CreateMember('Daniil Sokolov', 'superb'));
-members.push(factory.CreateMember('Julia Sokolova', 'standard'));
-members.push(factory.CreateMember('Sergei Sokolov', 'simple'));
+// let members =[];
+// const factory = new MemberFactory();
+// members.push(factory.CreateMember('Daniil Sokolov', 'superb'));
+// members.push(factory.CreateMember('Julia Sokolova', 'standard'));
+// members.push(factory.CreateMember('Sergei Sokolov', 'simple'));
 
-members.forEach(function(member) {
-    member.define();
-})
+// members.forEach(function(member) {
+//     member.define();
+// })
+
+
 
 
 
